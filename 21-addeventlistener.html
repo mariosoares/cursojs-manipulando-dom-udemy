@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- outra forma de adicionar eventos diretamenteeno JS, sem ser passando diretamente o 
+        nome do evento no elemento HTML, tira onsubmit do form e adiciona o id -->
+    <form id="form">
+    <label>Informe sua idade:</label><br>
+    <input type="number" placeholder="18" id="age">
+    <br><br>
+    <button type="submit">Enviar</button>
+    </form>
+
+    <br>
+    <button id="btn">Diga olá</button>
+
+    <script>
+        const form = document.getElementById('form');
+
+        // recebe dois parâmetros, o primeiro é o evento em si e o segundo é a função que ele vai executar
+        //poderia passar uma função anômima como argumento ou fazer a chamada de uma função
+        // form.addEventListener('submit', function(){
+        //});
+
+        form.addEventListener('submit', enviar);
+
+        function enviar(e) { //para não recarregar o form após o envio
+            e.preventDefault();
+            alert('Seus dados foram submetidos.');
+            const input = document.getElementById('age');
+
+            if(input.value < 18){
+                alert('Menor de idade!')
+            }
+            else{
+                alert('Maior de idade!');
+            }
+        }
+
+       
+        const button = document.getElementById('btn');
+        btn.addEventListener('click', function(){
+            alert('Olá :)')
+        })
+
+    </script>
+   
+
+   
+</body>
+</html>

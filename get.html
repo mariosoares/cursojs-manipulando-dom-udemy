@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    // três elementos com a mesma classe
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    </p>
+
+    <span class="text">Hello world</span>
+    <span class="text">Hello world 2</span>
+
+    //mais duas formas de capturar elementos HTML
+    <script>
+		const element = document.querySelector('.text');
+		console.log(element);
+		const element1 = document.querySelectorAll('.text');
+		console.log(element1);
+		console.log(element1[2]);
+    </script>
+
+</body>
+</html>

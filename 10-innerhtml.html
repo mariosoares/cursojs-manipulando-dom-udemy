@@ -1,0 +1,34 @@
+<!-- // agora vamos começar a interagir, a manipular os elementos que a gente capturar -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+
+    <script>
+        const elementoP = document.getElementById('text'); // capturando o ELEMENTO p
+        //const elemento1 = elemento; // atrubuindo o ELEMENTO p
+        let conteudoElementoP = elementoP.innerHTML; // capturando o CONTEÚDO do elemento p, parece que é passado por valor e não por referência
+        console.log(elementoP);    
+        console.log(conteudoElementoP);
+        
+        elementoP.innerHTML = 'Hello World!!!'; // vai definir diretamente o CONTEÚDO do elemento p
+        //ou 
+        //conteudoNovo = 'Hello World!!!';
+        //elementoP.innerHTML = conteudoNovo;
+        let conteudoElementoPNovo = elementoP.innerHTML;
+        console.log(conteudoElementoP);
+        console.log(conteudoElementoPNovo);
+
+
+    </script>
+</body>
+</html>

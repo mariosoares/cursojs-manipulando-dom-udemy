@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p name="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    </p>
+
+    <span>Hello world</span>
+    <span>Hello world</span>
+    <span>Hello world</span>
+
+    <script>
+        //capturar a tag p através do name dele
+        const texto = document.getElementsByName('text');
+        console.log(texto); // resulta em um NodeList, um array com todos as tags p que tenha o name text
+        console.log(texto[0]); // acessando diretamente o elemento na posição 0 do array
+        console.log(texto[0].tagName);
+
+        const span = document.getElementsByTagName('span'); // retorna o array HTMLCollection
+        console.log(span);
+        console.log(span[0]); //acessando o primeiro elemento do array
+        span[1].innerHTML = 'Olá mundo!'; // alterando o segundo elemento do array span
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="container"><div id="lista-container">
+            <!-- ul não é filho direto da tag main, faz parte da tag div -->
+            <ul id="lista"> 
+                <li>Item 01</li>
+                <li>Item 02</li>
+                <li>Item 03</li>
+            </ul>
+        </div><span>Olá mundos</span></main>
+
+    <script>
+        const main = document.getElementById('container');
+        const div = document.getElementById('lista-container');
+        const ul = document.getElementById('lista');
+
+        console.log(main.childNodes);
+        console.log(div.childNodes);
+        console.log(ul.childNodes);
+        console.log(ul.childNodes[1]); //atentar que aqui o elemento [0] é text -> "\n"
+        ul.childNodes[1].innerHTML = 'Olá mundo 01'; //mudando o valor
+        //só temos dois nós dentro do html, que são o head e o body
+        console.log(document.documentElement.firstChild);
+        console.log(document.documentElement.lastChild);
+
+        //pegando os pais
+        console.log(ul.parentNode); //retorna a div
+        console.log(ul.parentNode.parentNode); //retorna a main, pode ir subindo
+    </script>
+</body>
+</html>

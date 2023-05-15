@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onmouseover & Onmouseout</title>
+</head>
+<body>
+    
+</body>
+    <h3>Onmouseover & Onmouseout</h3>
+
+    <p onmouseover="trocarTexto()" onmouseout="trocarTexto1()"> Passe o mouse aqui!</p>
+
+    <script>
+        function trocarTexto() {
+            const p = document.querySelector('p');
+            p.innerHTML = 'Olá, trocando texto over'
+
+        }
+
+        function trocarTexto1() {
+            const p = document.querySelector('p');
+            p.innerHTML = 'Olá, trocando texto out'
+
+        }
+    </script>
+
+</html>

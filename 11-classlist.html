@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .blue {
+            color: blue;
+        }
+        .red{
+            color: red;
+        }
+        .magenta{
+            color: magenta;
+        }
+    </style>
+</head>
+<body>
+    <p id="text" class="texto">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+
+    <script>
+        // classList remove ou adiciona classes
+        // apesar de ser possível não é uma boa prática alterar estilo via javascript
+        const texto = document.getElementById('text');
+        texto.classList.add('blue'); // adicionado dinamicamente com javascript
+        console.log(texto);
+        // adicionado comentários para utilizar uma estrutura condicional:
+        /*texto.classList.remove('texto');
+        console.log(texto);
+        texto.classList.remove('blue');
+        console.log(texto);
+        texto.classList.add('red');
+        console.log(texto);*/
+        if (texto.classList.contains('blue')){
+            alert('Elemento contém a classe Blue');
+        }
+    </script>
+</body>
+</html>

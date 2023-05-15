@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   
+</head>
+<body>
+    <!-- <div id="container"></div> -->
+
+    <script>
+        // agora veremos como adicionar elementos criados com .createElement
+        // na última aula estava só no javascript, vamos ver como incluir no HTML
+        // quando a div é criada dinamicamente via JS, img e h1 não são renderizados:
+        // solução logo abaixo "body[0].appendChild(container)"
+        var body = document.getElementsByTagName('body');
+
+        //const container = document.getElementById('container'); 
+        var logoHTML = document.createElement('img');
+        var title = document.createElement('h1');
+
+        let container = document.createElement('div');
+        container.setAttribute('id', 'container');
+        body[0].appendChild(container);
+
+        console.log(container);
+        console.log(logoHTML);
+        console.log(title);
+
+        title.innerHTML = 'Logo do HTML5';
+        
+        logoHTML.src = './html.png';
+        logoHTML.width = '200';
+
+        container.appendChild(title);
+        container.appendChild(logoHTML);
+      
+
+        //container.removeChild(title); // removendo o título
+    </script>
+</body>
+</html>

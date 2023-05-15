@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1 class="title">Olá mundo!</h1> <!-- diferente do id, a classe não é única-->
+        <h2 class="title">Olá mundo 02!</h2> <!-- outro item no HTMLCollection do console do browser -->
+    </div>
+
+    <script>
+        // vamos capturar a div através do id
+        const div = document.getElementById('container');
+        console.log(div); 
+        // capturando o h1 usando a classe
+        const titulo = document.getElementsByClassName('title'); <!--captura todos os elementos que tenham essa classe --> 
+        console.log(titulo); // HTMLCollection
+
+    </script>
+</body>
+</html>

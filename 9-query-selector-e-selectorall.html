@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    // três elementos com a mesma classe
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    </p>
+
+    <span class="text">Hello world</span>
+
+    <h5 class="text">Hello world 2</h5>
+
+   
+    <script>
+        //O innerHTML vai definir o conteúdo de um um elemento ou somente capturar
+        //mais duas formas de capturar elementos HTML
+        // aqui querySelectorAll captura elementos para um NodeList
+        const element = document.querySelector('.text'); // aqui precisa passar o .text, se fosse id passaria #nome-do-id
+        console.log(element);
+        const elements = document.querySelectorAll('.text'); // vamos ter aqui um array NodeList
+        console.log(elements);
+        console.log(elements[2]); // acessando a terceira posição de elements
+
+        // código que captura os mesmos elementos que querySelectorAll, para um HTMLCollection (getElementById também)
+        const outroElemento = document.getElementsByClassName('text');
+        console.log(outroElemento);
+        console.log(outroElemento[2]); // acessando a terceira posição de elements
+
+    </script>
+
+</body>
+</html>
